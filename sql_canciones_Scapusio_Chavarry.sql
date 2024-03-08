@@ -34,3 +34,12 @@ insert into cantante values (225, "a", "b", "h", 15, "aw3d", 1222.4, "foa");
 insert into cantante values (225, "a", "b", "h", 19, "aw3d", 112312312312324, "foa");
 insert into cancion values (12, 342, "alejo", 112, 1234);
 insert into album values(21, "hij", null);
+
+
+select * from pedido where pedido.id_cliente=1;
+select * from pedido group by id_cliente;
+select * from detalle_pedido;
+select * from cliente join pedido on id != id_cliente;
+select * from cliente where id != (select id_cliente from pedido);
+select * from detalle_pedido join pedido on pedido.id_pedido = detalle_pedido.id_pedido where descuento = 0.5;
+
